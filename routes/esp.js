@@ -2,13 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 /* GET pagina singola esperienza */
-router.get('/:esptext', function(req, res, next) {
+router.get('/:esptext', (req, res, next)=> {
 	let param = req.params.esptext;
     res.render('esp', { search: param});
+    next()
 });
 
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+router.get('/', (req, res)=> {
+    res.render('index');
 });
 
 

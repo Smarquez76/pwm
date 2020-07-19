@@ -24,14 +24,14 @@
         <a id="linkhome" class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#covid">Covid-OK</a>
+        <a class="nav-link disabled" href="#">Login</a>
       </li>
     </ul>
   </div>
 </nav>
 
 <div class="jumbotron" id="jumbotron">
-  <h1 class="display-2"><strong>&#191Kefare?</strong></h1>
+  <h1 class="display-2"><strong>&#191Kefare?</strong><img class="covid" src="/images/logo-covid.png"></h1>
   <h2 class="display-3">Scegli l'esperienza che fa per te..</h2>
   <hr class="my-4">
   <form>

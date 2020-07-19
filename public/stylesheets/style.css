@@ -31,6 +31,11 @@
             text-align: center;
           }
 
+          .covid {
+            width: 120px;
+            height: 70px;
+          }
+
           .alert-danger, .alert-warning {
 
             font-size: 35px;

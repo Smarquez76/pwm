@@ -34,20 +34,23 @@ function alert(number) {
 
   let textErr = document.createTextNode("Errore non ben identificato. Riprovare più tardi.");
 
-  if (number == 404) {
+ if (number == 440) {
           err.classList.add("alert-warning");
           ele2.classList.add("btn-warning");
-          textErr = document.createTextNode("La risorsa cercata non è disponibile. Riprovare più tardi.");
+          textErr = document.createTextNode("La risorsa cercata non è compatibile col filtro Covid-19.");
 
-  } else { if (number == 503) {
-            textErr = document.createTextNode("Server momentaneamente non disponibile. Riprovare più tardi.");
+  } else if (number == 404) {
+          err.classList.add("alert-warning");
+          ele2.classList.add("btn-warning");
+          textErr = document.createTextNode("La risorsa cercata non è disponibile. Cambiare il parametro di ricerca.");
 
-              };
-           err.classList.add("alert-danger");
-           ele2.classList.add("btn-danger");   
-
-      };
-
+              } else { if (number == 503) {
+                        textErr = document.createTextNode("Server momentaneamente non disponibile. Riprovare più tardi.");
+                        };
+                       err.classList.add("alert-danger");
+                       ele2.classList.add("btn-danger");   
+                      };
+  
   ele1.appendChild(ele2);
 
   msg.appendChild(err).appendChild(wrap).appendChild(textErr);
@@ -101,7 +104,7 @@ function template(response, temp){
 
                function appendResponse(item,index,arr){
 
-                 if ((sanitizeHTML(item.operational_days) != "") && (sanitizeHTML(item.operational_days).indexOf("2019") == -1) && (sanitizeHTML(item.about).indexOf("2019") == -1) && (item.is_available_today || item.is_available_tomorrow)) {
+                   if ((sanitizeHTML(item.operational_days) != "") && (sanitizeHTML(item.operational_days).indexOf("2019") == -1)  && (sanitizeHTML(item.about).indexOf("2019") == -1) && (item.is_available_today || item.is_available_tomorrow) && covidMask(item.categories[0].id)) {
 
                         let newEle0 = document.createElement(temp.wrapper0);
                         newEle0.classList.add("card","text-dark","bg-light","mb-3");
@@ -149,9 +152,13 @@ function template(response, temp){
                         elem.insertBefore(newEle4, elem.childNodes[2]);
                       } 
                     }    
-            resp.data.forEach(appendResponse);
+                resp.data.forEach(appendResponse);
+                if (document.getElementsByClassName("card").length == 0){
 
-          }  else { alert(404); }
+                            alert(440);
+                    }
+              }
+                  else { alert(404); }
 
       
 }
