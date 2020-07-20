@@ -3,11 +3,11 @@
               background-size: cover;
               height: 100%;
               padding-top: 20px;
-              margin: 0px;
+              margin-top: 20px;
+              margin-bottom: 20px;
           }
 
           #formControl {
-              
               width: 600px;
             
           }  
@@ -17,13 +17,11 @@
           }
 
           .display-2,.display-3 {
-
               text-shadow: 4px 4px 2px white;
               margin: 0px;
           }
 
           .display-5 {
-
             text-shadow: 1px 1px 2px white;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -37,53 +35,51 @@
           }
 
           .alert-danger, .alert-warning {
-
             font-size: 35px;
             text-align: center;
           }
 
           #blind {
-
             display: none;
           }
 
           .main {
-
-              margin: 0;
+            margin: 0;
           }
                     
           footer {
-              font-family: "Lucida Console", Courier, monospace;
-              font-style: italic;
-              padding-top: 50px;
-              text-align: center;
-              padding-bottom: 50px;
+            font-family: "Lucida Console", Courier, monospace;
+            font-style: italic;
+            padding-top: 50px;
+            text-align: center;
+            padding-bottom: 50px;
           }
           
           body {
-              
-              position: relative;
+            position: relative;
               
           }
 
+    /* media queries per responsivita'*/
           @media screen and (max-width: 900px) {
-          .display-3 {
-                 font-size: 40px;
-                 text-shadow: 1px 1px 1px white;
+           .display-3 {
+                font-size: 40px;
+                text-shadow: 1px 1px 1px white;
                }
-          .jumbotron {
-
-            padding-top: 5px;
+    
+           .jumbotron {
+                padding-top: 5px;
                 }
-          .display-2 {
+    
+           .display-2 {
                 font-size: 60px;
                 }
 
-          .display-5 {
-              font-size: 30px;
+           .display-5 {
+                font-size: 30px;
                }
 
-          footer>h5, .alert {
+           footer>h5, .alert {
             font-size: 17px;
                 }
           }

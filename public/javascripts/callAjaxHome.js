@@ -9,7 +9,7 @@ const templateObj = {
 
 let ajaxcallObj = {
   method: 'GET',
-  url: "https://sandbox.musement.com/api/v3/activities?text=esperienze&text_operator=AND&extend_other_languages=YES&extend_content_fields=NO&fuzziness_level=LEVEL-0&zero_terms_query=NONE&sort_by=relevance&limit=75&offset=0",
+  url: "https://sandbox.musement.com/api/v3/activities?text=esperienze&text_operator=AND&extend_other_languages=YES&extend_content_fields=NO&fuzziness_level=LEVEL-0&zero_terms_query=NONE&sort_by=relevance&limit=50&offset=0",
   asynchronous: true,
 }
 
@@ -37,7 +37,7 @@ function alert(number) {
   if (number == 440) {
           err.classList.add("alert-warning");
           ele2.classList.add("btn-warning");
-          textErr = document.createTextNode("La risorsa cercata non è compatibile col filtro Covid-19.");
+          textErr = document.createTextNode("Le esperienze disponibili collegate alla ricerca effettuata non sono compatibili col filtro Covid-19.");
 
   } else if (number == 404) {
           err.classList.add("alert-warning");
@@ -55,7 +55,7 @@ function alert(number) {
 
   msg.appendChild(err).appendChild(wrap).appendChild(textErr);
   
-  var elem = document.getElementById('inserr');    // Get the element to insert a new node
+  var elem = document.getElementById('inserr');    
   elem.insertBefore(ele1, elem.childNodes[1]);
 
 }
@@ -93,10 +93,10 @@ function template(response, temp){
       let targ = document.querySelector(temp.target);
       let resp = JSON.parse(response);
 
-      console.log(resp.data);
-
       // pulisce l'elemento target, cioè l'id main
       targ.innerHTML = '';
+
+      console.log(resp.data);
 
         if (resp.data.length!=0) {
             function appendResponse(item,index,arr){
@@ -140,13 +140,13 @@ function template(response, temp){
 
                             targ.appendChild(newEle0).appendChild(newEle1).appendChild(newEle2).appendChild(textTitle);
 
-                            var elem = document.getElementById(idwrap);    // Get the element to insert a new node
+                            var elem = document.getElementById(idwrap);    
                             elem.insertBefore(img, elem.childNodes[0]);
 
-                            var elem = document.getElementById(idcard);    // Get the element to insert a new node
+                            var elem = document.getElementById(idcard);  
                             elem.insertBefore(newEle3, elem.childNodes[1]);
 
-                            var elem = document.getElementById(idcard);    // Get the element to insert a new node
+                            var elem = document.getElementById(idcard);    
                             elem.insertBefore(newEle4, elem.childNodes[2]);
                           }
                       }

@@ -7,14 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <!-- CSS personalizzato -->
     <link rel="stylesheet" href="/stylesheets/style.css">
     
-    <title>&#191Kefare?</title>
-  </head>
-  <body id="home">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a  id="linklogo" class="navbar-brand" href=""><strong>&#191Kefare?</strong></a>
+    <title>&#191;Kefare?</title>
+ </head>
+
+<body id="home">
+ <!-- menù--> 
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a  id="linklogo" class="navbar-brand" href=""><strong>&#191;Kefare?</strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,10 +30,10 @@
       </li>
     </ul>
   </div>
-</nav>
-
+ </nav>
+<!-- jumbotron-->
 <div class="jumbotron" id="jumbotron">
-  <h1 class="display-2"><strong>&#191Kefare?</strong><img class="covid" src="/images/logo-covid.png"></h1>
+  <h1 class="display-2"><strong>&#191;Kefare?</strong><img class="covid" src="/images/logo-covid.png" alt="filtro-covid"></h1>
   <h2 class="display-3">Scegli l'esperienza che fa per te..</h2>
   <hr class="my-4">
   <form>
@@ -41,22 +43,23 @@
   </form>
   <a id="cercabtn" class="btn btn-secondary btn-lg text-white" role="button">Cerca</a>
  </div>
+ <!-- aggancio del parsing -->
  <div id="main"> 
   <div class="card-columns">
   </div>
  </div>
+ <!-- Semplice footer dove mettere i crediti dell'app e il logo di validazione CSS-->
 <footer class="bg-light text-dark">
    <p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valido!" /></a></p>
    <h5>Credits: Simone Marchetto - PWM a.a. 2019-2020</h5>
-   <h6>Powered by <a href="https://musement.com/" target="_blank"><img src="/images/logo.jpg"></a></h6>
-   <!-- Semplice footer dove mettere i crediti dell'app-->
+   <h6>Powered by <a href="https://musement.com/" target="_blank"><img src="/images/logo.jpg" alt="logo musement.com"></a></h6>
 </footer>
 
-    <!-- Chiamata allo script -->
-   <script id="callAjaxHome" type="text/javascript" src="/javascripts/callAjaxHome.js"></script>
-   <script type="text/javascript" src="/javascripts/utility.js"></script>
-   <script type="text/javascript" src="/javascripts/scriptIndex.js"></script>
-
+    <!-- Caricamento degli script utilizzati-->
+   <script src="/javascripts/utility.js"></script>
+   <script src="/javascripts/scriptIndex.js"></script>
+   <script src="/javascripts/callAjaxHome.js"></script>
+   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
